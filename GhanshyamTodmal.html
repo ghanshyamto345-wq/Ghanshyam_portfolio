@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GHANSHYAM - PORTFOLIO</title>
+
+    <link rel="preconnect" href="[fonts.googleapis.com](https://fonts.googleapis.com)">
+    <link rel="preconnect" href="[fonts.gstatic.com](https://fonts.gstatic.com)" crossorigin>
+    <link
+        href="[fonts.googleapis.com](https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap)"
+        rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background:
+                radial-gradient(circle at top left, rgba(0, 229, 255, 0.18), transparent 30%),
+                radial-gradient(circle at bottom right, rgba(255, 0, 255, 0.15), transparent 30%),
+                #050816;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+
+        nav {
+            width: 100%;
+            height: 85px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background: rgba(8, 12, 28, 0.88);
+            backdrop-filter: blur(14px);
+            border-bottom: 1px solid rgba(0, 229, 255, 0.7);
+            box-shadow: 0 0 25px rgba(0, 229, 255, 0.25);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .left {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #00e5ff;
+            letter-spacing: 1px;
+            text-shadow:
+                0 0 8px #00e5ff,
+                0 0 18px rgba(0, 229, 255, 0.7);
+        }
+
+        nav ul {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+        }
+
+        nav ul li {
+            list-style: none;
+        }
+
+        nav ul li a {
+            position: relative;
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 15px;
+            font-weight: 500;
+            transition: 0.3s ease;
+        }
+
+        nav ul li a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -7px;
+            width: 0;
+            height: 2px;
+            background: #00e5ff;
+            box-shadow: 0 0 10px #00e5ff;
+            transition: 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #00e5ff;
+            text-shadow: 0 0 12px #00e5ff;
+        }
+
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+
+        .firstsection {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            min-height: 90vh;
+            padding: 50px 8%;
+        }
+
+        .leftsection {
+            width: 48%;
+            font-size: 2.8rem;
+            font-weight: 600;
+            line-height: 1.35;
+        }
+
+        .leftsection div {
+            margin: 10px 0;
+        }
+
+        .purple {
+            color: #00e5ff;
+            text-shadow:
+                0 0 10px #00e5ff,
+                0 0 25px rgba(0, 229, 255, 0.9);
+        }
+
+        #element {
+            color: #ff00ff;
+            text-shadow:
+                0 0 10px #ff00ff,
+                0 0 25px rgba(255, 0, 255, 0.8);
+        }
+
+        .rightsection {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .rightsection img {
+            width: 350px;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid #00e5ff;
+            box-shadow:
+                0 0 20px #00e5ff,
+                0 0 45px rgba(0, 229, 255, 0.85),
+                0 0 80px rgba(255, 0, 255, 0.45);
+            transition: 0.4s ease;
+            animation: floatImage 4s ease-in-out infinite;
+        }
+
+        .rightsection img:hover {
+            transform: scale(1.06);
+            box-shadow:
+                0 0 25px #00e5ff,
+                0 0 60px rgba(0, 229, 255, 0.95),
+                0 0 100px rgba(255, 0, 255, 0.65);
+        }
+
+        @keyframes floatImage {
+            0% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-14px);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        /* Buttons */
+
+        .buttons {
+            display: flex;
+            gap: 20px;
+            margin-top: 35px;
+            flex-wrap: wrap;
+        }
+
+        .button {
+            padding: 14px 30px;
+            border: 2px solid #00e5ff;
+            border-radius: 35px;
+            background: transparent;
+            color: #00e5ff;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.4s ease;
+            box-shadow: 0 0 12px rgba(0, 229, 255, 0.25);
+        }
+
+        .button:hover {
+            background: #00e5ff;
+            color: #050816;
+            box-shadow:
+                0 0 15px #00e5ff,
+                0 0 35px #00e5ff,
+                0 0 65px rgba(0, 229, 255, 0.9);
+            transform: translateY(-5px);
+        }
+
+        /* HR */
+
+        main hr {
+            border: none;
+            height: 2px;
+            margin: 50px 80px;
+            background: linear-gradient(to right, transparent, #00e5ff, #ff00ff, transparent);
+            box-shadow: 0 0 15px rgba(0, 229, 255, 0.7);
+        }
+
+        /* Skills */
+
+        .SecondSection {
+            width: 85%;
+            margin: auto;
+            min-height: 90vh;
+            padding-top: 40px;
+        }
+
+        .SecondSection h1 {
+            font-size: 2.4rem;
+            color: #00e5ff;
+            text-align: center;
+            margin-bottom: 80px;
+            text-shadow:
+                0 0 12px #00e5ff,
+                0 0 25px rgba(0, 229, 255, 0.8);
+        }
+
+        .SecondSection .Box {
+            width: 100%;
+            min-height: 360px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 35px;
+        }
+
+        .SecondSection .vertical {
+            position: relative;
+            min-height: 245px;
+            padding: 32px 22px;
+            border: 1px solid rgba(0, 229, 255, 0.55);
+            border-radius: 18px;
+            background: rgba(12, 18, 40, 0.72);
+            box-shadow:
+                0 0 18px rgba(0, 229, 255, 0.18),
+                inset 0 0 18px rgba(0, 229, 255, 0.05);
+            transition: 0.35s ease;
+        }
+
+        .SecondSection .vertical:hover {
+            transform: translateY(-10px);
+            border-color: #ff00ff;
+            box-shadow:
+                0 0 20px rgba(0, 229, 255, 0.5),
+                0 0 35px rgba(255, 0, 255, 0.35);
+        }
+
+        .image-top {
+            width: 55px;
+            height: 55px;
+            object-fit: contain;
+            background: #ffffff;
+            border-radius: 50%;
+            padding: 7px;
+            margin-bottom: 18px;
+            box-shadow: 0 0 15px rgba(0, 229, 255, 0.8);
+        }
+
+        .vertical-text {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #00e5ff;
+            margin-bottom: 12px;
+            text-shadow: 0 0 10px rgba(0, 229, 255, 0.8);
+        }
+
+        .vertical-desc {
+            color: #cfcfcf;
+            font-size: 13px;
+            line-height: 1.7;
+        }
+
+        /* Footer */
+
+        footer {
+            background: rgba(8, 12, 28, 0.95);
+            border-top: 1px solid rgba(0, 229, 255, 0.7);
+            box-shadow: 0 -5px 25px rgba(0, 229, 255, 0.2);
+            margin-top: 80px;
+        }
+
+        .footer {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: flex-start;
+            gap: 35px;
+            padding: 45px 8%;
+            flex-wrap: wrap;
+        }
+
+        .footer h3 {
+            color: #00e5ff;
+            text-shadow: 0 0 12px #00e5ff;
+            max-width: 280px;
+        }
+
+        .footer ul {
+            list-style: none;
+        }
+
+        .footer ul li {
+            margin: 10px 0;
+        }
+
+        .footer ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            transition: 0.3s ease;
+        }
+
+        .footer ul li a:hover {
+            color: #ff00ff;
+            text-shadow: 0 0 12px #ff00ff;
+        }
+
+        .footer-rights {
+            text-align: center;
+            padding: 20px;
+            color: #888888;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        /* Responsive Design */
+
+        @media screen and (max-width: 900px) {
+            nav {
+                height: auto;
+                padding: 20px;
+                flex-direction: column;
+                gap: 18px;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 18px;
+            }
+
+            .firstsection {
+                flex-direction: column-reverse;
+                text-align: center;
+                gap: 45px;
+            }
+
+            .leftsection {
+                width: 100%;
+                font-size: 2.1rem;
+            }
+
+            .buttons {
+                justify-content: center;
+            }
+
+            .SecondSection .Box {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .left {
+                font-size: 1.5rem;
+                text-align: center;
+            }
+
+            .leftsection {
+                font-size: 1.7rem;
+            }
+
+            .rightsection img {
+                width: 250px;
+                height: 250px;
+            }
+
+            .SecondSection .Box {
+                grid-template-columns: 1fr;
+            }
+
+            main hr {
+                margin: 40px 35px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">GHANSHYAM'S PORTFOLIO</div>
+
+            <div class="right">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="https://www.instagram.com/ghanshyamt0/" target="_blank">Instagram</a></li>
+                    <li><a href="https://www.linkedin.com/in/ghanshyam-todmal-634040272/" target="_blank"
+                            rel="noopener noreferrer">LinkedIn</a></li>
+                    <li><a href="contacts.html" target="_blank">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="firstsection" id="home">
+            <div class="leftsection">
+                Hi, my name is <span class="purple">Ghanshyam</span>
+                <div>And I am a passionate </div>
+                <span id="element"></span>
+
+                <div class="buttons">
+                    <button class="button" onclick="window.location.href='Resume.pdf'">
+                        Download Resume
+                    </button>
+                    <button class="button" onclick="window.open('https://github.com/ghanshyamto345-wq','_blank')">
+                        Visit GitHub
+                    </button>
+                </div>
+            </div>
+
+            <div class="rightsection">
+                <img src="MYPG.PNG" alt="Ghanshyam Profile Photo">
+            </div>
+        </section>
+
+        <hr>
+
+        <section class="SecondSection" id="services">
+            <h1>Tech Skills</h1>
+
+            <div class="Box">
+                <div class="vertical">
+                    <img class="image-top" src="html.png" alt="HTML and CSS">
+                    <div class="vertical-text">HTML & CSS</div>
+                    <div class="vertical-desc">
+                        Built responsive and modern web pages using HTML5 and CSS3 with clean layouts and user-friendly
+                        designs.
+                    </div>
+                </div>
+
+                <div class="vertical">
+                    <img class="image-top" src="dbms.png" alt="SQL">
+                    <div class="vertical-text">SQL</div>
+                    <div class="vertical-desc">
+                        Designed and managed relational databases using SQL Server with queries, joins, stored
+                        procedures, and database connectivity.
+                    </div>
+                </div>
+
+                <div class="vertical">
+                    <img class="image-top" src="python.png" alt="Python">
+                    <div class="vertical-text">Python</div>
+                    <div class="vertical-desc">
+                        Used Python for problem-solving, automation, data analysis, and implementing basic programming
+                        concepts.
+                    </div>
+                </div>
+
+                <div class="vertical">
+                    <img class="image-top" src="powerbi.png" alt="Power BI">
+                    <div class="vertical-text">Power BI</div>
+                    <div class="vertical-desc">
+                        Created interactive dashboards and visual reports to analyze data and support business
+                        decision-making.
+                    </div>
+                </div>
+
+                <div class="vertical">
+                    <img class="image-top" src="c2.png" alt="C Sharp">
+                    <div class="vertical-text">C#</div>
+                    <div class="vertical-desc">
+                        Created desktop applications using C# Windows Forms and implemented CRUD operations with SQL
+                        Server.
+                    </div>
+                </div>
+
+                <div class="vertical">
+                    <img class="image-top" src="tools.png" alt="Tools">
+                    <div class="vertical-text">Tools</div>
+                    <div class="vertical-desc">
+                        Aspiring Data Analyst with knowledge of Power BI, GitHub, Minitab, and POM-QM. Passionate about
+                        transforming data into meaningful insights and continuously learning new technologies.
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contacts">
+        <div class="footer">
+            <h3>Thank You For Visit</h3>
+        </div>
+
+        <div class="footer-rights">
+            Copyright &#169; GHANSHYAMPORTFOLIO.COM | All Rights Reserved
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Software Developer', 'Data Analyst', 'Web Developer'],
+            typeSpeed: 50,
+            backSpeed: 40,
+            loop: true
+        });
+    </script>
+</body>
+
+</html>
